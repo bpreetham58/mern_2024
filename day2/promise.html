@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fetchData(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const success = true;
+                    if(success){
+                        resolve('Data fetched successfully');  
+                    }
+                    else{
+                        reject('Data fetching failed');
+                    }
+                }, 1000);
+            });
+        }
+
+        function processData(data){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const processedData = data + " and processed";
+                    resolve(processedData);
+                }, 5000);
+            });
+        }
+
+        function saveData(processedData){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(processedData + " and saved!");
+                }, 7000);
+            });
+        }
+
+        async function executeTasks() {
+            try {
+                const fetchedData = await fetchData();
+                console.log(fetchedData);
+
+                const processedData = await processData(fetchedData);
+                console.log(processedData);
+
+                const savedData = await saveData(processedData);
+                console.log(savedData);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+      
+        executeTasks();
+    </script>
+</body>
+</html>
