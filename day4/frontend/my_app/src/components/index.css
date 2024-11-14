@@ -1,0 +1,124 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;  /* Black background */
+  color: #fff;  /* White text color for contrast */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full viewport height */
+  text-align: center;  /* Center text */
+}
+
+/* Container for forms */
+form {
+  background-color: #333;  /* Dark grey background for forms */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  text-align: left;  /* Align form elements to the left inside the form */
+}
+
+/* Form Title */
+h2 {
+  color: #d9534f;  /* Red color for the title */
+  margin-bottom: 20px;
+}
+
+/* Form elements */
+label {
+  font-weight: bold;
+  color: #fff;  /* White text for labels */
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #444;  /* Dark border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #222;  /* Dark background for inputs */
+  color: #fff;  /* White text in input fields */
+}
+
+input:focus {
+  border-color: #d9534f;  /* Red border on focus */
+  outline: none;
+}
+
+button {
+  background-color: #d9534f;  /* Red button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #c12e2a;  /* Darker red on hover */
+}
+
+/* Button styling for Delete and Edit buttons */
+button[type="button"] {
+  background-color: #ff6f61;  /* Red for Delete button */
+  margin-left: 10px;
+}
+
+button[type="button"]:hover {
+  background-color: #e04d40;  /* Darker red on hover */
+}
+
+button[type="submit"]:hover {
+  background-color: #c12e2a;  /* Darker red for Submit button on hover */
+}
+
+/* List of trainers */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #333;  /* Dark background for each list item */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+li strong {
+  color: #d9534f;  /* Red for trainer details label */
+}
+
+li span {
+  margin: 0 10px;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #d9534f;  /* Red for links */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Error message */
+.error {
+  color: #c12e2a;  /* Dark red for error messages */
+  text-align: center;
+  margin-top: 10px;
+}
