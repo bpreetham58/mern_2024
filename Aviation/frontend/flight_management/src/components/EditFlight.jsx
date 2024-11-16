@@ -25,7 +25,7 @@ function EditFlight({ flights, onEdit }) {
       if (response.status === 200) {
         onEdit(id, response.data);
         alert('Flight updated successfully!');
-        navigate('/airways');
+        navigate('/flights');
       }
     } catch (error) {
       console.error('Error updating flight:', error);
